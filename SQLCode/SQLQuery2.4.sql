@@ -190,7 +190,7 @@ Insert into [The_local_Loft].[dbo].[$5GiftVoucher] (CustomerID, FirstName, LastN
 Select * From [The_Local_Loft].[dbo].[Loyalty_Program_Dataset_5000]
 Where RewardName = '$5 Gift Voucher'
 
-Create Table [The_local_Loft].[dbo].[TShirt](
+Create Table [The_Local_Loft].[dbo].[TShirt](
 	CustomerID nvarchar(50),
 	FirstName nvarchar(50),
 	LastName nvarchar(50),
@@ -397,6 +397,34 @@ Insert into [The_local_Loft].[dbo].[VIPMember] (CustomerID, FirstName, LastName,
 Select * From [The_Local_Loft].[dbo].[Loyalty_Program_Dataset_5000]
 Where CurrentPoints >=5000
 
+Create Table [The_local_Loft].[dbo].[Purchases](
+	CustomerID nvarchar(50),
+	JoinDate datetime2,
+	TransactionID nvarchar(50),
+	PurchaseDate datetime2,
+	AmountSpent nvarchar(50)
+	)
+Insert into [The_local_Loft].[dbo].[Purchases] (CustomerID, JoinDate, TransactionID, PurchaseDate, AmountSpent)
+Select CustomerID, JoinDate, TransactionID, PurchaseDate, AmountSpent From [The_Local_Loft].[dbo].[Loyalty_Program_Dataset_5000]
+
+Create Table [The_local_Loft].[dbo].[Customer_Info](
+	CustomerID nvarchar(50),
+	FirstName nvarchar(50),
+	LastName nvarchar(50),
+	Email nvarchar(50),
+	Phone nvarchar(50),
+	Tier nvarchar(50),
+	CurrentPoints int,
+	PointsEarned int,
+	RewardID nvarchar(50),
+	RewardName nvarchar(50),
+	PointsRequired nvarchar(50),
+	RedemptionDate nvarchar(50),
+	PointsUsed nvarchar(50))
+Insert into [The_local_Loft].[dbo].[Customer_Info] (
+	CustomerID,FirstName,LastName,Email,Phone,Tier,CurrentPoints,PointsEarned,RewardID,RewardName,PointsRequired,RedemptionDate,PointsUsed)
+Select CustomerID,FirstName,LastName,Email,Phone,Tier,CurrentPoints,PointsEarned,RewardID,RewardName,PointsRequired,RedemptionDate,PointsUsed From [The_Local_Loft].[dbo].[Loyalty_Program_Dataset_5000]
+
 Select * From [The_Local_Loft].[dbo].[Bronze_Customers]
 Select * From [The_Local_Loft].[dbo].[Silver_Customers]
 Select * From [The_Local_Loft].[dbo].[Gold_Customers]
@@ -418,3 +446,33 @@ Select * From [The_Local_Loft].[dbo].[NoRewardRedeemed]
 Select * From [The_Local_Loft].[dbo].[NewMember]
 Select * From [The_Local_Loft].[dbo].[ActiveMember]
 Select * From [The_Local_Loft].[dbo].[VIPMember]
+
+Select * From [The_Local_Loft].[dbo].[Purchases]
+Select * From [The_Local_Loft].[dbo].[Customer_Info]
+
+Select 
+A.CustomerID,
+A.JoinDate, 
+A.TransactionID, 
+A.PurchaseDate, 
+A.AmountSpent, 
+B.FirstName, 
+B.LastName, 
+B.Email, 
+B.Phone, 
+B.Tier, 
+B.CurrentPoints, 
+B.PointsEarned, 
+B.RewardID,
+B.RewardName, 
+B.PointsRequired, 
+B.RedemptionDate,
+B.PointsUsed
+From [The_Local_Loft].[dbo].[Purchases] A
+Inner join [The_Local_Loft].[dbo].[Customer_Info] B
+on A.CustomerID=B.CustomerID
+
+Select *
+From [The_Local_Loft].[dbo].[Purchases]
+join [The_Local_Loft].[dbo].[Customer_Info]
+on [The_Local_Loft].[dbo].[Purchases].CustomerID=[The_Local_Loft].[dbo].[Customer_Info].CustomerID

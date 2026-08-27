@@ -296,3 +296,25 @@ Group by CustomerID, CurrentPoints
 Order by Engagment Desc
 
 --45.[JOIN / RELATIONSHIP] Using the customer and transaction data, calculate the total number of transactions, total amount spent, and total points earned for each customer, including customers who have no transactions.
+Select 
+A.CustomerID,
+A.JoinDate, 
+Count(A.TransactionID) as Total_Transactions, 
+A.PurchaseDate, 
+Sum(try_Cast(A.AmountSpent as decimal (10,2))) as Total_Spent,
+B.FirstName, 
+B.LastName, 
+B.Email, 
+B.Phone, 
+B.Tier, 
+B.CurrentPoints, 
+Sum(try_Cast(B.PointsEarned as decimal (10,2))) as Total_Points, 
+B.RewardID,
+B.RewardName, 
+B.PointsRequired, 
+B.RedemptionDate,
+B.PointsUsed
+From [The_Local_Loft].[dbo].[Purchases] A
+Left join [The_Local_Loft].[dbo].[Customer_Info] B
+on A.CustomerID=B.CustomerID
+Group by A.CustomerID,A.JoinDate,A.PurchaseDate,B.FirstName, B.LastName, B.Email, B.Phone, B.Tier, B.CurrentPoints, B.RewardID,B.RewardName, B.PointsRequired, B.RedemptionDate,B.PointsUsed;
