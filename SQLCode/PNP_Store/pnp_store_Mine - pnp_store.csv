@@ -1,0 +1,50 @@
+transaction_id;timestamp;store_location;customer_id;product_name;category;quantity;unit_price_zar;payment_type;total_spend_zar
+TXN1001;2026/03/01 08:14;PnP Canal Walk;SS-882101;Albany Superior White Bread 700g;Bakery;1;18.99;Card;18.99
+TXN1002;2026/03/01 08:30;PnP Canal Walk;SS-902311;Clover Full Cream Milk 2L;Dairy;2;35.99;Cash;71.98
+TXN1003;2026/03/01 09:05;PnP Sandton Nicol;SS-112093;Mrs Balls Chutney 470g;Pantry;1;44.5;Card;44.5
+TXN1004;2026/03/01 09:12;PnP Sandton Nicol;SS-112093;Tastic Long Grain Rice 2kg;Pantry;1;39.99;Card;39.99
+TXN1005;2026/03/01 09:40;PnP Claremont;SS-440212;Jacobs Kronung Instant Coffee 200g;Beverages;1;129.99;Smart Shopper Pay;129.99
+TXN1006;2026/03/01 10:02;PnP Waterfront;SS-993012;Fresh Bananas 1kg;Produce;1.5;24.99;Card;37.48
+TXN1007;2026/03/01 10:15;PnP Waterfront;SS-993012;Simba Chips Smoked Beef 120g;Snacks;3;18.5;Card;55.5
+TXN1008;2026/03/01 10:45;PnP Westville Junction;SS-302911;PnP Fresh Chicken Braaipack 1kg;Meat;2;68.99;Cash;137.98
+TXN1009;2026/03/01 11:00;PnP Westville Junction;GUEST;Ouma Rusks Condensed Milk 500g;Bakery;1;58.99;Cash;58.99
+TXN1010;2026/03/01 11:22;PnP Canal Walk;SS-882101;Sunfoil Sunflower Oil 2L;Pantry;1;64.99;Card;64.99
+TXN1011;2026/03/01 11:45;PnP Observatory;SS-551029;Castle Lite Cans 6x330ml;Liquor;2;89.99;Card;179.98
+TXN1012;2026/03/01 12:01;PnP Observatory;SS-551029;Beacon Marshmallows 150g;Snacks;1;19.99;Card;19.99
+TXN1013;2026/03/01 12:30;PnP Sandton Nicol;SS-771204;Artisanal Sourdough Bread;Bakery;1;42;Card;42,00
+TXN1014;2026/03/01 12:35;PnP Sandton Nicol;SS-771204;Fresh Salmon Fillet 300g;Meat;1;149.99;Card;149.99
+TXN1015;2026/03/01 13:10;PnP Rosebank;SS-663910;Coca-Cola No Sugar 2L;Beverages;2;26.99;Cash;53.98
+TXN1016;2026/03/02 08:20;PnP Claremont;SS-102938;Fairview Cheddar Cheese 800g;Dairy;1;94.99;Card;94.99
+TXN1017;2026/03/02 08:50;PnP Claremont;GUEST;PnP Soft Toilet Tissue 9s;Household;2;79.99;Cash;159.98
+TXN1018;2026/03/02 09:15;PnP Canal Walk;SS-402911;All Gold Tomato Sauce 700g;Pantry;1;36.99;Card;36.99
+TXN1019;2026/03/02 09:40;PnP Canal Walk;SS-402911;Aroma Rich Roast Coffee 250g;Beverages;1;54.99;Card;54.99
+TXN1020;2026/03/02 10:05;PnP Waterfront;SS-882101;Fresh Avocados 1kg;Produce;1;39.99;Card;39.99
+TXN1021;2026/03/02 10:25;PnP Waterfront;SS-882101;Clover Milk 2L;Dairy;1;35.99;Card;35.99
+TXN1022;2026/03/02 11:10;PnP Westville Junction;SS-902311;I&J Deep Capetonian Hake 600g;Frozen;1;89.99;Cash;89.99
+TXN1023;2026/03/02 11:30;PnP Westville Junction;SS-902311;McCain Cut Green Beans 1kg;Frozen;1;42.99;Cash;42.99
+TXN1024;2026/03/02 12:00;PnP Sandton Nicol;SS-112093;Black Cat Peanut Butter 800g;Pantry;1;62.99;Card;62.99
+TXN1025;2026/03/02 12:45;PnP Rosebank;SS-302911;Nestle Bar One Chocolate 55g;Snacks;5;12.5;Cash;62.5
+TXN1026;2026/03/03 08:10;PnP Observatory;SS-551029;Albany Superior White Bread 700g;Bakery;1;18.99;Card;18.99
+TXN1027;2026/03/03 08:45;PnP Observatory;SS-551029;Clover Butter 500g;Dairy;1;72.99;Card;72.99
+TXN1028;2026/03/03 09:12;PnP Canal Walk;SS-993012;Five Roses Tea Bags 100s;Beverages;1;56.99;Card;56.99
+TXN1029;2026/03/03 09:50;PnP Canal Walk;GUEST;PnP No Name Sugar 2kg;Pantry;2;41.99;Cash;83.98
+TXN1030;2026/03/03 10:15;PnP Sandton Nicol;SS-771204;Lindt Excellence Dark Chocolate 100g;Snacks;2;54.99;Card;109.98
+TXN1031;2026/03/03 10:40;PnP Sandton Nicol;SS-771204;Fresh Red Apples 1kg;Produce;1;22.99;Card;22.99
+TXN1032;2026/03/03 11:05;PnP Claremont;SS-440212;Handy Andy All Purpose Cleaner 750ml;Household;1;32.99;Card;32.99
+TXN1033;2026/03/03 11:30;PnP Claremont;SS-440212;Sunlight Dishwashing Liquid 750ml;Household;1;34.99;Card;34.99
+TXN1034;2026/03/03 12:10;PnP Rosebank;SS-663910;PnP Butchery Beef Mince 500g;Meat;2;59.99;Cash;119.98
+TXN1035;2026/03/03 12:40;PnP Rosebank;SS-663910;Knorr Roast Meat Gravy 32g;Pantry;3;14.5;Cash;43.5
+TXN1036;2026/03/04 08:30;PnP Waterfront;SS-882101;Wild Bean Cafe Cappuccino Large;Beverages;1;38;Card;38
+TXN1037;2026/03/04 09:10;PnP Waterfront;SS-882101;Wild Bean Cafe Almond Croissant;Bakery;1;28.5;Card;28.5
+TXN1038;2026/03/04 09:45;PnP Westville Junction;SS-302911;Doritos Nacho Cheese 145g;Snacks;2;21.99;Cash;43.98
+TXN1039;2026/03/04 10:20;PnP Westville Junction;SS-302911;Stoney Ginger Beer 2L;Beverages;1;24.99;Cash;24.99
+TXN1040;2026/03/04 11:00;PnP Sandton Nicol;SS-112093;Fresh Strawberries 250g;Produce;2;39.99;Card;79.98
+TXN1041;2026/03/04 11:40;PnP Canal Walk;SS-402911;PnP Free Range Eggs 18s;Dairy;1;52.99;Card;52.99
+TXN1042;2026/03/04 12:15;PnP Canal Walk;SS-402911;Parmalat Yoghurt 1kg;Dairy;1;36.99;Card;36.99
+TXN1043;2026/03/04 12:50;PnP Observatory;SS-102938;Savanna Dry Cider 6x330ml;Liquor;1;104.99;Card;104.99
+TXN1044;2026/03/04 13:20;PnP Observatory;SS-102938;PnP Charcoal Briquettes 4kg;Household;1;69.99;Card;69.99
+TXN1045;2026/03/05 08:15;PnP Claremont;SS-440212;Albany Superior White Bread 700g;Bakery;1;18.99;Smart Shopper Pay;18.99
+TXN1047;2026/03/05 09:00;PnP Sandton Nicol;SS-771204;Organic Milk 2L;Dairy;1;44.99;Card;44.99
+TXN1048;2026/03/05 09:30;PnP Rosebank;SS-902311;Cadbury Dairy Milk 150g;Snacks;2;29.99;Cash;59.98
+TXN1049;2026/03/05 10:10;PnP Waterfront;SS-551029;Energade Sports Drink 500ml;Beverages;3;16.99;Card;50.97
+TXN1050;2026/03/05 10:45;PnP Canal Walk;SS-882101;Omo Auto Washing Powder 2kg;Household;1;89.99;Card;89.99
