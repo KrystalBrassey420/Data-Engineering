@@ -297,24 +297,43 @@ Order by Engagment Desc
 
 --45.[JOIN / RELATIONSHIP] Using the customer and transaction data, calculate the total number of transactions, total amount spent, and total points earned for each customer, including customers who have no transactions.
 Select 
-A.CustomerID,
-A.JoinDate, 
-Count(A.TransactionID) as Total_Transactions, 
-A.PurchaseDate, 
-Sum(try_Cast(A.AmountSpent as decimal (10,2))) as Total_Spent,
-B.FirstName, 
-B.LastName, 
-B.Email, 
-B.Phone, 
-B.Tier, 
-B.CurrentPoints, 
-Sum(try_Cast(B.PointsEarned as decimal (10,2))) as Total_Points, 
-B.RewardID,
-B.RewardName, 
-B.PointsRequired, 
-B.RedemptionDate,
-B.PointsUsed
-From [The_Local_Loft].[dbo].[Purchases] A
-Left join [The_Local_Loft].[dbo].[Customer_Info] B
-on A.CustomerID=B.CustomerID
-Group by A.CustomerID,A.JoinDate,A.PurchaseDate,B.FirstName, B.LastName, B.Email, B.Phone, B.Tier, B.CurrentPoints, B.RewardID,B.RewardName, B.PointsRequired, B.RedemptionDate,B.PointsUsed;
+B.CustomerID,
+Count(A.TransactionID) as Total_Transactions,
+Sum(Cast(A.AmountSpent as decimal (10,2))) as Total_Amount_Spent,
+Sum(Cast(B.PointsEarned as decimal (10,2))) as Total_Points_Earned
+from [The_Local_Loft].[dbo].[Purchases] A
+Join [The_Local_Loft].[dbo].[Customer_Info] B
+on A.CustomerID = B.CustomerID
+Group by B.CustomerID 
+Order by B.CustomerID Asc
+
+--SQL Joins 
+--46.Write a query using an INNER JOIN between dbo.Customer_Info and dbo.Purchases to display each customer and their purchase details.
+
+--47.Join dbo.Customer_Info with dbo.Loyalty_Program_C... to display each customer’s personal information and loyalty programme details.
+
+--48.Use a LEFT JOIN between dbo.Customer_Info and dbo.Purchases to list all customers, including those without recorded purchases.
+
+--49.Join dbo.Customer_Info, dbo.Purchases, and dbo.PointsRedeemed to show each customer’s purchases and redeemed points.
+
+--50.Use a join between dbo.Customer_Info and dbo.PointsNotRedeemed to identify customers with points that have not been redeemed.
+
+--51.Join dbo.PointsRedeemed and dbo.NewRewardRedeem to display the rewards associated with redeemed points.
+
+--52.Join dbo.NewRewardRedeem with the appropriate reward tables to display the reward selected by each customer and its points requirement.
+
+--53.Use a LEFT JOIN between dbo.Customer_Info and dbo.NewRewardRedeem to list all customers, including those who have never redeemed a reward.
+
+--54.Join dbo.Customer_Info, dbo.Purchases, and dbo.ActiveMember to display the purchase activity of active loyalty programme members.
+
+--55.Join dbo.Customer_Info with dbo.NewMember to display the details of customers classified as new members.
+
+--56.Write a query that joins dbo.Customer_Info to dbo.Bronze_Customers, dbo.Silver_Customers, dbo.Gold_Customers, and dbo.Platinum_Customers to show each customer’s membership level.
+
+--57.Join dbo.Customer_Info, dbo.VIPMember, and dbo.VIPEventAccess to identify VIP members who qualify for event access.
+
+--58.Join dbo.NewRewardRedeem with dbo.$5GiftVoucher, dbo.$10GiftVoucher, and dbo.FreeShipping to show customers who redeemed voucher or delivery rewards.
+
+--59.Join dbo.NewRewardRedeem with dbo.CoffeeMug, dbo.TShirt, and dbo.WirelessEarbuds to show customers who redeemed physical rewards.
+
+--60.Write a query using multiple joins to produce a customer loyalty report containing the customer’s information, membership level, purchases, points redeemed, points not redeemed, and rewards claimed.
